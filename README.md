@@ -1,9 +1,26 @@
-# Discord Bot - Discord.js v14
+<h1 align="center">
+  <br>
+  <a href="https://github.com/saiteja-madha"><img src="https://i.pinimg.com/736x/de/65/e2/de65e24e2d5c0ecb45140548e54853f5.jpg" height="200" alt="Discord.js v14 Bot"></a>
+  <br>
+  Discord.js v14 Bot
+  <br>
+</h1>
 
-A Discord bot built with **Discord.js v14**, supporting both **Prefix Commands** and **Slash Commands**.
+<p align="center">
+  <a href="https://discord.gg/euHfmaaS">
+    <img src="https://img.shields.io/badge/Support%20Server-Discord-blue?style=for-the-badge&logo=discord" alt="Support Server"/>
+  </a>
+</p>
 
----
+<p align="center">
+  A Discord bot built with Discord.js v14, supporting both Prefix Commands and 
+  <span style="font-weight:bold; color:#fff; text-shadow:0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f;">
+    Slash Commands
+  </span>
+</p>
 
+
+--- 
 ## 📋 Requirements
 - Node.js v16.9.0 or higher
 - npm or yarn
@@ -17,7 +34,7 @@ A Discord bot built with **Discord.js v14**, supporting both **Prefix Commands**
 1. Go to [Discord Developer Portal](https://discord.com/developers/applications)  
 2. Click **New Application** and give it a name  
 3. Go to the **Bot** tab → click **Add Bot**  
-4. Copy your **Token** (you’ll need it later)  
+4. Copy your **Token** (you'll need it later)  
 
 ### 2. Get Client ID
 - In **General Information**, copy your **Application ID** (this is your Client ID).
