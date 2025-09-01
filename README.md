@@ -19,6 +19,9 @@
   </span>
 </p>
 
+<p align="center" style="font-size:16px; font-weight:bold;">
+  ⭐ Don’t forget to click <strong>Star</strong> on the project — it really helps us!
+</p>
 
 --- 
 ## 📋 Requirements
@@ -54,5 +57,6 @@ cd discord-bot
 # Install dependencies
 npm install
 ```
+
 
 
