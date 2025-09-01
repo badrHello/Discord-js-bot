@@ -31,10 +31,11 @@ A Discord bot built with **Discord.js v14**, supporting both **Prefix Commands**
 ### 4. Install Project
 ```bash
 # Clone the repo or download files
-git clone <repository-url>
+git clone https://github.com/badrHello/Discord-js-bot.git
 cd discord-bot
 
 # Install dependencies
 npm install
 ```
+
 
