@@ -10,10 +10,9 @@ module.exports = {
   category: 'utility',
   
   async execute(message, args, client) {
-    // Get all categories from command files
-    const categoryInfo = new Map(); // Store category info with emojis
+
+    const categoryInfo = new Map(); 
     
-    // Scan PrefixCommands folder
     const prefixCommandsPath = path.join(__dirname, '..', 'PrefixCommands');
     
     if (fs.existsSync(prefixCommandsPath)) {
@@ -21,7 +20,6 @@ module.exports = {
       for (const file of prefixFiles) {
         try {
           const command = require(path.join(prefixCommandsPath, file));
-          // Only include commands that have both emoji and category
           if (command.category && command.emoji) {
             categoryInfo.set(command.category, {
               emoji: command.emoji,
@@ -34,14 +32,12 @@ module.exports = {
       }
     }
     
-    // Scan SlashCommands folder
     const slashCommandsPath = path.join(__dirname, '..', 'SlashCommands');
     if (fs.existsSync(slashCommandsPath)) {
       const slashFiles = fs.readdirSync(slashCommandsPath).filter(file => file.endsWith('.js'));
       for (const file of slashFiles) {
         try {
           const command = require(path.join(slashCommandsPath, file));
-          // Only include commands that have both emoji and category
           if (command.category && command.emoji) {
             if (!categoryInfo.has(command.category)) {
               categoryInfo.set(command.category, {
@@ -62,7 +58,6 @@ module.exports = {
       return message.reply('❌ No commands with valid categories and emojis found.');
     }
     
-    // Create select menu options
     const selectOptions = categoryArray.map(category => {
       const info = categoryInfo.get(category);
       return {
@@ -80,7 +75,6 @@ module.exports = {
     
     const row = new ActionRowBuilder().addComponents(selectMenu);
     
-    // Create main help embed
     const embed = new EmbedBuilder()
       .setColor(client.config?.colors?.primary || '#0099ff')
       .setTitle(`🤖 ${client.user.username} Help`)
@@ -114,7 +108,6 @@ module.exports = {
       components: [row] 
     });
     
-    // Create collector for select menu interactions
     const collector = response.createMessageComponentCollector({
       componentType: ComponentType.StringSelect,
       time: 60000 // 1 minute timeout
@@ -131,17 +124,14 @@ module.exports = {
       const selectedCategory = selectInteraction.values[0];
       const categoryEmoji = categoryInfo.get(selectedCategory).emoji;
       
-      // Get commands from selected category by scanning files
       const slashCommands = [];
       const prefixCommands = [];
       
-      // Scan PrefixCommands folder for category
       if (fs.existsSync(prefixCommandsPath)) {
         const prefixFiles = fs.readdirSync(prefixCommandsPath).filter(file => file.endsWith('.js'));
         for (const file of prefixFiles) {
           try {
             const command = require(path.join(prefixCommandsPath, file));
-            // Only include commands that have both emoji and category
             if (command.category === selectedCategory && command.emoji && command.category) {
               prefixCommands.push(command);
             }
@@ -151,13 +141,11 @@ module.exports = {
         }
       }
       
-      // Scan SlashCommands folder for category
       if (fs.existsSync(slashCommandsPath)) {
         const slashFiles = fs.readdirSync(slashCommandsPath).filter(file => file.endsWith('.js'));
         for (const file of slashFiles) {
           try {
             const command = require(path.join(slashCommandsPath, file));
-            // Only include commands that have both emoji and category
             if (command.category === selectedCategory && command.emoji && command.category) {
               slashCommands.push(command);
             }
@@ -167,7 +155,6 @@ module.exports = {
         }
       }
       
-      // Create category embed
       const categoryEmbed = new EmbedBuilder()
         .setColor(client.config?.colors?.primary || '#0099ff')
         .setTitle(`${categoryEmoji} ${selectedCategory.charAt(0).toUpperCase() + selectedCategory.slice(1)} Commands`)
@@ -221,7 +208,7 @@ module.exports = {
       try {
         await response.edit({ components: [disabledRow] });
       } catch (error) {
-        // Ignore errors if message was deleted
+        console.log(error)
       }
     });
   }
