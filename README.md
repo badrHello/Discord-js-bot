@@ -13,11 +13,9 @@
 </p>
 
 <p align="center">
-  A Discord bot built with Discord.js v14, supporting both Prefix Commands and 
-  <span style="font-weight:bold; color:#fff; text-shadow:0 0 5px #00f, 0 0 10px #00f, 0 0 20px #00f;">
-    Slash Commands
-  </span>
+  A Discord bot built with Discord.js v14, supporting both <strong>Prefix Commands</strong> and <strong>Slash Commands</strong>
 </p>
+
 
 <p align="center" style="font-size:16px; font-weight:bold;">
   ⭐ Don’t forget to click <strong>Star</strong> on the project — it really helps us!
@@ -57,6 +55,7 @@ cd discord-bot
 # Install dependencies
 npm install
 ```
+
 
 
 
