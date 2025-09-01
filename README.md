@@ -7,7 +7,6 @@ A Discord bot built with **Discord.js v14**, supporting both **Prefix Commands**
 ## 📋 Requirements
 - Node.js v16.9.0 or higher
 - npm or yarn
-- Discord account
 - Discord Bot application
 
 ---
@@ -38,3 +37,4 @@ cd discord-bot
 # Install dependencies
 npm install
 ```
+
