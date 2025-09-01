@@ -7,7 +7,7 @@ module.exports = {
   
   async execute(member) {
     try {
-      const channelId = '1411250454062694431';
+      const channelId = '';
       const channel = member.guild.channels.cache.get(channelId);
       
       if (!channel) return;
@@ -54,4 +54,5 @@ module.exports = {
       console.error('Error in welcome event:', error);
     }
   }
+
 };
