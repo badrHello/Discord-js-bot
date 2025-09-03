@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://github.com/saiteja-madha"><img src="https://i.pinimg.com/736x/de/65/e2/de65e24e2d5c0ecb45140548e54853f5.jpg" height="200" alt="Discord.js v14 Bot"></a>
+  <a href="https://github.com/saiteja-madha"><img src="https://i.pinimg.com/736x/94/c0/92/94c0925894bceccb1fe15d833b307a85.jpg" height="200" alt="Discord.js v14 Bot"></a>
   <br>
   Discord.js v14 Bot
   <br>
@@ -58,6 +58,7 @@ cd discord-bot
 # Install dependencies
 npm install
 ```
+
 
 
 
