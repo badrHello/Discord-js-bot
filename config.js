@@ -29,9 +29,5 @@ module.exports = {
     error: '#ED4245',
     info: '#5865F2'
   },
-  // Bot Owner ID
-  ownerId: process.env.OWNER_ID || '',
-  
-  // Development Mode
-  development: process.env.DEVELOPMENT === 'true'
+
 };
